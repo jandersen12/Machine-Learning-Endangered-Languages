@@ -21,3 +21,6 @@ Thumbs.db
 
 # VS Code
 .vscode/
+
+# Data
+Data/glottolog-5.3/
