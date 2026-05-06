@@ -1,5 +1,9 @@
 # Languages at Risk: A Machine Learning Approach to Predicting Endangered Languages
 
+*In progress: currently building dymanic data pipeline and adding additional features to try and produce a higher accuracy without relying on speaker count. Stay tuned!*
+
+Last updated: May 5, 2026
+
 ### Project Overview
 
 This project leverages machine learning to predict the endangerment level of languages worldwide using demographic, technological, and legal status indicators. Drawing on five integrated datasets, it explores the relationship between factors such as speaker count, urbanization, internet use, and legal recognition, and their influence on language vitality. Multiple models, including ensemble methods, gradient boosting, and neural networks, were trained and evaluated, achieving high predictive performance. The results highlight the critical role of speaker population size while underscoring opportunities for improvement through the inclusion of additional socio-economic and historical features.
