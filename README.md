@@ -34,7 +34,6 @@ This project leverages machine learning to predict the endangerment level of lan
 |Urban population (% of total population)| [World Bank](https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS) | Percent of the total population in a country that lives in an urban area|
 |Urban population growth (annual %)| [World Bank](https://data.worldbank.org/indicator/SP.URB.GROW)| Yearly growth of urban populations in a country.|
 
-> **Note:** [Any data access instructions, e.g. "Download and place in `data/` before running."]
 
 ## File structure
 
