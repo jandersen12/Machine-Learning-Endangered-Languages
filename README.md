@@ -1,40 +1,86 @@
-# Languages at Risk: A Machine Learning Approach to Predicting Endangered Languages
 
-*In progress: currently building dymanic data pipeline and adding additional features to try and produce a higher accuracy without relying on speaker count. Stay tuned!*
+# Predicting a Language's Endangerment Level
 
-Last updated: May 5, 2026
+> Experts estimate that 40% of the world's languages are currently endangered, but keeping track of a language's endangerment status is currently a highly manual and time intensive task. This project leverages machine learning techniques to understand key features that lead to language endangerment and utilizes those features to automatically predict a language's level of endangerment.
 
-### Project Overview
+[![Python](https://img.shields.io/badge/Python-3.10-blue)]()
+[![UC Berkeley MIDS](https://img.shields.io/badge/UC%20Berkeley-MIDS-gold)]()
+
+---
+
+## Overview
 
 This project leverages machine learning to predict the endangerment level of languages worldwide using demographic, technological, and legal status indicators. Drawing on five integrated datasets, it explores the relationship between factors such as speaker count, urbanization, internet use, and legal recognition, and their influence on language vitality. Multiple models, including ensemble methods, gradient boosting, and neural networks, were trained and evaluated, achieving high predictive performance. The results highlight the critical role of speaker population size while underscoring opportunities for improvement through the inclusion of additional socio-economic and historical features.
 
-### Tools
+## Table of contents
 
-Python | SKLearn | TensorFlow
+- [Data](#data)
+- [File structure](#file-structure)
+- [Setup & reproduction](#setup--reproduction)
+- [Methods](#methods)
+- [Results](#results)
+- [Key learnings](#key-learnings)
+- [Contributors](#contributors)
 
-### Process
+## Data
 
-**Data Cleaning**
+| Dataset | Source | Description |
+|---------|--------|-------------|
+| Endangered Languages Project (ELP/ELCAT) | [ELCAT Github Link](https://github.com/cldf-datasets/elcat/tree/main) | Catalogue of Endangered Languages. 2023. University of Hawaii at Manoa. http://www.endangeredlanguages.com. Contains a list of ~3,000 languages with varying levels of endangerment. |
+| List of languages by total number of speakers | [Wikipedia](https://en.wikipedia.org/w/index.php?title=List_of_languages_by_total_number_of_speakers&oldid=1350848572) | List of 20 non-endangered languages and their speaker counts. |
+|List of official languages by country and territory | [Wikipedia](https://en.wikipedia.org/w/index.php?title=List_of_official_languages_by_country_and_territory&oldid=1348824802) | List of countries and their politically recognized official, regional, minority, national and widely spoken languages.|
+|GDP per capita (current US$)|[World Bank](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD) | Countries and their GDP per capita.|
+|Individuals using the internet (% of population)| [World Bank](https://data.worldbank.org/indicator/IT.NET.USER.ZS) | Percentage of population using the internet in each country.|
+|Urban population (% of total population)| [World Bank](https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS) | Percent of the total population in a country that lives in an urban area|
+|Urban population growth (annual %)| [World Bank](https://data.worldbank.org/indicator/SP.URB.GROW)| Yearly growth of urban populations in a country.|
 
-1. Five datasets were merged, including language endangerment status, official languages by country, speaker counts, urbanization rates, and internet use rates. 
-2. The target variable was endangerment level (categorical), and features included language, speaker count, urbanization rate, internet use rate, one-hot encoded legal status categories (official, national, regional, minority, widely spoken), and the number of countries where the language is spoken. 
-3. Data preparation involved regex formatting, log-transforming speaker counts, and creating interaction features combining urbanization with speaker count and internet use with speaker count.
+> **Note:** [Any data access instructions, e.g. "Download and place in `data/` before running."]
 
-**Models**
+## File structure
 
-A baseline model predicting the most common class was first established. More complex models including ensemble methods, gradient boosting, extra trees, and neural networks were trained and tuned to identify the best performing approach. Detailed experiment configurations and results are documented in the final report.
+```
+├── data/           # processed datasets
+├── archive/        # version 1 of project
+│   ├── notebooks/  # version 1 models and data cleaning notebooks
+│   ├── data/       # version 1 project data
+│   ├── docs/       # version 1 presentation and final report
+│   └── README.md   
+├── notebooks/      # current models and data analysis notebooks
+├── images/         # charts and figures used in the README
+├── README.md
+└── requirements.txt
+```
 
-### Results
+## Setup & reproduction
 
-All advanced models achieved high predictive accuracy around 88%, with the number of speakers emerging as the most influential feature across approaches. Gradient Boosting and Ensemble models performed similarly and were the top performers. While results were strong, the models may not fully capture historical language trends. Expanding the feature set to include more socio-economic, geographic, or historical indicators could help surpass the 88% threshold for test accuracy.
+```bash
+# Clone the repo
+git clone https://github.com/jandersen12/Machine-Learning-Endangered-Languages.git
+cd Machine-Learning-Endangered-Languages
 
+# Install dependencies
+pip install -r requirements.txt   # Python
 
-### Key Learnings
+# Run notebooks in order
+# 01_... → 02_... → 03_...
+```
 
-The project strengthened my skills in feature engineering, model selection, and systematic hyperparameter tuning using Scikit-learn and TensorFlow. It reinforced best practices in feature transformation, as well as techniques for interpreting model outputs to identify key predictive drivers using precision, recall, and accuracy scores.
+> **Environment:** Python 3.10 
 
+## Methods
 
-### Contributors 
+*in progress*
+
+## Results
+
+*in progress*
+
+## Key learnings
+
+*in progress*
+
+## Contributors
+
 Helin Yilmaz | Courtney Chen | Brian Woods
 
 UC Berkeley MIDS | July 2025
