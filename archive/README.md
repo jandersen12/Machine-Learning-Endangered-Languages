@@ -4,9 +4,9 @@ These files reflect the initial model run from July 2025 on the original dataset
 
 ```
 ├── archive/        # version 1 of project
-│   ├── notebooks/  # version 1 models and data cleaning notebooks
 │   ├── data/       # version 1 project data
 │   ├── docs/       # version 1 presentation and final report
+│   ├── notebooks/  # version 1 models and data cleaning notebooks
 │   └── README.md   
 ├── README.md
 ```
