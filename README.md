@@ -68,7 +68,7 @@ pip install -r requirements.txt   # Python
 
 ## Methods
 
-*Version 2 is in progress. Check out the [archive/](../Machine-Learning-Endangered-Languages/archive) folder for original models and results, where we achieved 88% accuracy in predicting a language's level of endangerment.*
+*Version 2 is in progress. Check out the [archive/](archive/) folder for original models and results, where we achieved 88% accuracy in predicting a language's level of endangerment.*
 
 ## Results
 
