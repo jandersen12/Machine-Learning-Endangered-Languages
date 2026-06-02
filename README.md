@@ -1,7 +1,7 @@
 
 # Predicting a Language's Endangerment Level
 
-> Experts estimate that 40% of the world's languages are currently endangered, but keeping track of a language's endangerment status is currently a highly manual and time intensive task. This project leverages machine learning techniques to answer the question *Can publicly available socioeconomic and geographic data approximate language endangerment status without requiring on-the-ground linguistic assessment?*.
+> Experts estimate that 40% of the world's languages are currently endangered, but keeping track of a language's endangerment status is currently a highly manual and time intensive task. This project leverages machine learning techniques to answer the question *"Can publicly available socioeconomic and geographic data approximate language endangerment status without requiring on-the-ground linguistic assessment?"*.
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue)]()
 [![UC Berkeley MIDS](https://img.shields.io/badge/UC%20Berkeley-MIDS-gold)]()
