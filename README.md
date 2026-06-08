@@ -10,7 +10,7 @@
 
 ## Overview
 
-This project leverages machine learning to predict the endangerment level of languages worldwide using demographic, technological, and legal status indicators. Drawing on five integrated datasets, it explores the relationship between factors such as speaker count, urbanization, internet use, and legal recognition, and their influence on language vitality. Multiple models, including ensemble methods, gradient boosting, and neural networks, were trained and evaluated, achieving high predictive performance. The results highlight the critical role of speaker population size while underscoring opportunities for improvement through the inclusion of additional socio-economic and historical features.
+This project leverages machine learning to predict the endangerment level of languages worldwide using demographic, technological, and legal status indicators. Drawing on five integrated datasets, it explores the relationship between factors such as speaker count, urbanization rates, internet use, and legal recognition, and their influence on language vitality. Multiple models, including ensemble methods, gradient boosting, and neural networks, were trained and evaluated, with the highest predictive performance reaching 88% accuracy. The results highlight the critical role of speaker population size while underscoring opportunities for improvement through the inclusion of additional socio-economic and historical features.
 
 ## Table of contents
 
@@ -26,25 +26,23 @@ This project leverages machine learning to predict the endangerment level of lan
 
 | Dataset | Source | Description |
 |---------|--------|-------------|
-| Endangered Languages Project (ELP/ELCAT) | [ELCAT Github Link](https://github.com/cldf-datasets/elcat/tree/main) | Catalogue of Endangered Languages. 2023. University of Hawaii at Manoa. http://www.endangeredlanguages.com. Contains a list of ~3,000 languages with varying levels of endangerment. |
+| Endangered Languages Project | [Endangered Languages Project](http://www.endangeredlanguages.com) | Catalogue of Endangered Languages. 2023. University of Hawaii at Manoa. http://www.endangeredlanguages.com. Contains a list of ~3,000 languages with varying levels of endangerment. |
 | List of languages by total number of speakers | [Wikipedia](https://en.wikipedia.org/w/index.php?title=List_of_languages_by_total_number_of_speakers&oldid=1350848572) | List of 20 non-endangered languages and their speaker counts. |
 |List of official languages by country and territory | [Wikipedia](https://en.wikipedia.org/w/index.php?title=List_of_official_languages_by_country_and_territory&oldid=1348824802) | List of countries and their politically recognized official, regional, minority, national and widely spoken languages.|
 |GDP per capita (current US$)|[World Bank](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD) | Countries and their GDP per capita.|
 |Individuals using the internet (% of population)| [World Bank](https://data.worldbank.org/indicator/IT.NET.USER.ZS) | Percentage of population using the internet in each country.|
 |Urban population (% of total population)| [World Bank](https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS) | Percent of the total population in a country that lives in an urban area|
-|Urban population growth (annual %)| [World Bank](https://data.worldbank.org/indicator/SP.URB.GROW)| Yearly growth of urban populations in a country.|
 
 
 ## File structure
 
 ```
 ├── data/           # processed datasets
-├── archive/        # version 1 of project
-│   ├── notebooks/  # version 1 models and data cleaning notebooks
-│   ├── data/       # version 1 project data
-│   ├── docs/       # version 1 presentation and final report
+├── archive/        # version 2 work in progress
+│   ├── notebooks/
+│   ├── data/
 │   └── README.md   
-├── notebooks/      # current models and data analysis notebooks
+├── notebooks/      # models and data analysis notebooks
 ├── images/         # charts and figures used in the README
 ├── README.md
 └── requirements.txt
@@ -60,23 +58,26 @@ cd Machine-Learning-Endangered-Languages
 # Install dependencies
 pip install -r requirements.txt   # Python
 
-# Run notebooks in order
-# 01_... → 02_... → 03_...
 ```
 
 > **Environment:** Python 3.10 
 
 ## Methods
 
-*Version 2 is in progress. Check out the [archive/](archive/) folder for original models and results, where we achieved 88% accuracy in predicting a language's level of endangerment.*
+- Integrated datasets from multiple sources with Regex techniques and feature engineering to produce a final, model-ready dataset.
+- Ran a baseline model that predicted the majority class achieved 46% accuracy on the test set.
+- Handled class imbalance with SMOTE and tree-based models. 
+- Used different machine learning models to see which performed best in predicting language endangerment: ensemble, neural networks, extra trees and gradient boosting.
 
 ## Results
 
-*In progress*
+- Predictive performance of a model is highly related to speaker count. This feature often requires manual on-the-ground techniques to measure, so further research could potentially benefit from feature engineering that attempts to predict the speaker count of a language in order to then determine its level of endangerment. 
+- Gradient Boosting and Ensemble models achieved the highest performance **~88%** test accuracy.
+- These models relied on current socioeconomic data, but the inclusion of historical factors such as history of emigration and conflict could further enhance the model's performance. 
 
 ## Key learnings
 
-*In progress*
+This project required turning an ambiguous research question into a multi-source predictive model. The main challenge in this project was in designing a data integration process with socioeconomic features that held true to the original problem. Through the project I also gained hands-on experience with machine learning techniques using Tensorflow and Scikit-Learn to make predictions and interpret results.
 
 ## Contributors
 
